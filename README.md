@@ -1,2 +1,2 @@
 # javahw
-Homework itSTEP Java
+Homework ItSTEP Java
