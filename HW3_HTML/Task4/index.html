@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+    <style>
+        footer {
+            background-color: #2a4f6e;
+            color: white;
+            font-family: sans-serif;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .first, .second {
+            margin: 50px 50px 30px 10%;
+            height: 30%;
+            float: left;
+        }
+        li:hover {
+            text-decoration: underline;
+        }
+        .third {
+            display: inline-block;
+            float: right;
+            margin: 50px 170px 40px 5px;
+            text-align: center;
+        }
+        .facebook {
+            background-image: url("../../img/fb_gray.png");
+        }
+        .instagram {
+            background-image: url("../../img/insta_gray.png");
+        }
+        .youtube {
+            background-image: url("../../img/youtube_gray.png");
+        }
+        .facebook:hover {
+            background-image: url("../../img/fb.png");
+        }
+        .instagram:hover {
+            background-image: url("../../img/insta.png");
+        }
+        .youtube:hover {
+            background-image: url("../../img/youtube.png");
+        }
+        .facebook, .instagram, .youtube
+        {
+            display: inline-block;
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+        hr {
+            width: 90%;
+        }
+        .end{
+            text-align: center;
+            padding: 20px;
+            height: 50px;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+<footer>
+    <ul class="first">
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>News</li>
+    </ul>
+    <ul class="second">
+        <li>Blog</li>
+        <li>FAQ</li>
+        <li>Contacts</li>
+        <li>Privacy & cookies</li>
+    </ul>
+    <ul class="third" >
+        <li class ="facebook"></li>
+        <li class ="instagram"></li>
+        <li class ="youtube"></li>
+    </ul>
+    <hr/>
+    <div class="end">Copyright © Company 2018 - 2019</div>
+</footer>
+</body>
+</html>
