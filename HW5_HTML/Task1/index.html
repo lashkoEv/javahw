@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CreditCard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        form {
+            border-radius: 10px;
+            background: #9ecccc;
+            z-index: 1;
+            top: -50px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 30px 20px 50px;
+            padding: 100px 0 0 50px;
+            height: 280px;
+            width: 500px;
+
+        }
+
+        label {
+            font-size: small;
+            color: darkslategray;
+        }
+
+        p {
+            top: 45px;
+            left: 30px;
+            line-height: 45px;
+            padding-left: 40px;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            height: 45px;
+            width: 400px;
+            background: #da6423;
+            z-index: 2;
+
+        }
+
+        div {
+            margin: 15px 0;
+        }
+
+        input {
+            background: #a8d1d1;
+            padding: 7px;
+            margin: 5px 0;
+            border: 0;
+            border-bottom: inset darkslategray 1px;
+
+        }
+
+        .date {
+            width: 59%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        #month, #year, #cvv {
+             width: 70px;
+        }
+
+        img {
+              object-position: 40px 30px;
+              position: relative;
+              height: 200px;
+              z-index: 3;
+              border-radius: 10px;
+              bottom: 250px;
+              left: 400px;
+              top: -270px;
+
+        }
+    </style>
+</head>
+<body>
+<p>CREDIT CARD DETAILS</p>
+<form>
+    <div>
+        <label>Card Number</label>
+        <br>
+        <input type="number" required name="numCard" placeholder="1234 5678 9012 3456">
+        <br>
+    </div>
+    <div>
+        <label>Name On Card</label>
+        <br>
+        <input type="text" required name="nameCard" placeholder="Name Surname">
+        <br>
+    </div>
+    <div class="date">
+        <div>
+            <label>Expiry Date</label>
+            <br>
+            <input id="month" type="number" min="1" max="12" name="month" placeholder="02" required>
+        </div>
+        <div>
+            <input type="number" id="year" min="1990" max="2030" name="year" placeholder="2017" required>
+        </div>
+        <div>
+            <label>CVV/CVN</label>
+            <br>
+            <input id="cvv" type="password" minlength="3" maxlength="3" required placeholder="***">
+        </div>
+    </div>
+</form>
+<div class="img">
+    <img src="../../img/moon_flag.png" alt="moon flag">
+</div>
+</body>
+</html>

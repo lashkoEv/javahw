@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styles</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .text {
+            color: grey;
+        }
+
+        .active {
+            background: #3faf47;
+        }
+
+        .hoverGreen {
+            background: #28772e;
+        }
+
+        .danger {
+            background: #e53e61;
+        }
+
+        .hoverRed {
+            background: #98253d;
+        }
+
+        .disabled {
+            background: dimgrey;
+        }
+
+        .invalid {
+            background: url("../../img/invalid.png") no-repeat 190px;
+            background-size: 15px;
+            color: #e54566;
+        }
+
+        .valid {
+
+            background: url("../../img/valid.png") no-repeat 190px;
+            background-size: 15px;
+            color: #41b049;
+        }
+
+        .text, .valid, .invalid {
+            height: 30px;
+            padding-left: 15px;
+            border: 1px solid;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        .checkbox {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .checkbox + label {
+            position: relative;
+            padding: 0 0 0 60px;
+        }
+
+        .checkbox + label:before {
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid green;
+            transition: 400ms;
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 0;
+            width: 50px;
+        }
+
+        .checkbox + label:after {
+
+            height: 18px;
+            border-radius: 3px;
+            background: #41b049;
+            transition: 1s;
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            width: 22px;
+        }
+
+        .checkbox:checked + label:before {
+            border-color: #e54566;
+        }
+
+        .checkbox:checked + label:after {
+            background: #e54566;
+            left: 26px;
+        }
+
+        .radioChecked, .radioUnchecked {
+            background-color: #41b049;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label span {
+            margin: 0 5px 0 15px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid green;
+            cursor: pointer;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+        }
+
+        input[type="radio"]:checked + label span {
+            background: green;
+            width: 10px;
+            height: 10px;
+            border: 5px double white;
+            margin-bottom: -3px;
+        }
+
+        input[type="button"] {
+            color: white;
+            height: 30px;
+            width: 75px;
+            border-radius: 5px;
+            margin-right: 10px;
+            border: none;
+        }
+
+        input[type="button"]:hover {
+            cursor: pointer;
+            transform: scale(1.4);
+        }
+
+        input[type="button"].circle {
+            color: white;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: none;
+        }
+
+        input[type="button"].circle:hover {
+            transform: scale(1.4);
+        }
+
+        input[type="button"].bPlus {
+            background: #52ca83;
+        }
+
+        input[type="button"].bMinus {
+            background: #ca2470;
+        }
+
+        textarea{
+            width: 500px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <h4>Inputs</h4>
+    <input class="text" type="text" id="input" placeholder="Enter some text">
+    <input class="valid" type="text" id="validInput" value="valid text">
+    <input class="invalid" type="text" id="invalidInput" value="invalid text">
+    <h4>Check boxes</h4>
+    <input class="checkbox" type="checkbox" name="subscribe" id="cb1">
+    <label for="cb1">Subscribe </label>
+    <input class="checkbox" type="checkbox" checked name="noSubscribe" id="cb2">
+    <label for="cb2">Subscribe </label>
+    <h4>Gender</h4>
+    <input class="radioChecked" type="radio" checked name="radio" id="on">
+    <label for="on"><span></span>Male</label>
+    <input class="radioUnchecked" type="radio" name="radio" id="off">
+    <label for="off"><span></span>Female</label>
+    <h4>Buttons</h4>
+    <input class="active" type="button" value="Active">
+    <input class="hoverGreen" type="button" value="Hover">
+    <input class="danger" type="button" value="Danger">
+    <input class="hoverRed" type="button" value="Hover">
+    <input class="disabled" type="button" value="Disabled">
+    <input class="circle bPlus" type="button" value=&plus;>
+    <input class="circle bMinus" type="button" value=&minus;>
+    <h4>Text area</h4>
+    <textarea name="textarea" placeholder="&emsp;&emsp;&emsp;Enter some text..." id="textarea"></textarea>
+</form>
+</body>
+</html>

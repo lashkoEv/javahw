@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        input, select {
+            border: 0;
+            border-bottom: 1px solid grey;
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+
+        #submit {
+            color: #f5f5f5;
+            width: 150px;
+            padding: 8px 48px;
+            background: #1b9899;
+            border: none;
+            margin-top: 15px;
+            margin-left: 80%;
+        }
+
+        .check {
+            margin: 25px 0 0 25px;
+        }
+
+        img {
+            width: 24px;
+        }
+
+        @media screen and (min-width: 900px) {
+            #gender, #date {
+                width: 48%;
+            }
+
+            #userName, #email {
+                width: 90%;
+            }
+
+            #password, #confirmPassword {
+                width: 43%;
+            }
+
+            .inputData {
+                 justify-content: space-between;
+                 width: 100%;
+                 display: flex;
+             }
+
+            .registration, .personalData {
+                width: 50%;
+            }
+
+            #name, #surname, #gender, #date {
+                width: 45%;
+            }
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+            .inputData {
+                flex-wrap: wrap;
+            }
+
+            .registration, .personalData {
+                width: 100%;
+            }
+
+            #gender, #date, #name, #surname {
+                width: 46%;
+            }
+
+            #userName, #email {
+                width: 90%;
+            }
+
+            #password, #confirmPassword {
+                width: 44%;
+            }
+
+            #submit {
+                margin-left: 70%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .registration, .personalData, #gender, #date, #name, #surname, #confirmPassword {
+                width: 99%;
+            }
+
+            #userName, #email, #password {
+                width: 90%;
+            }
+
+            #confirmPassword {
+                width: 90%;
+                margin-left: 5.5%;
+            }
+
+            #gender {
+                width: 100%;
+            }
+
+            #submit {
+                margin-left: 60%;
+            }
+        }
+
+        hr {
+            margin: 35px -10px;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <div class="inputData">
+        <div class="registration">
+            <h4>Registration form</h4>
+            <div>
+                <img src="../../img/username.png" alt="username">
+                <input type="text" id="userName" name="userName" required placeholder="Username">
+            </div>
+            <div>
+                <img src="../../img/email.png" alt="email">
+                <input type="email" id="email" name="email" required placeholder="Email address">
+            </div>
+            <div>
+                <img src="../../img/pswd.png" alt="password">
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm password">
+            </div>
+        </div>
+        <div class="personalData">
+            <h4>Personal details</h4>
+            <input type="text" id="name" required placeholder="First name" name="name">
+            <input type="text" id="surname" required placeholder="Last name" name="surname">
+            <br>
+            <select name="gender" id="gender"><option value="Male">Male</option><option value="Female">Female</option></select>
+            <input id="date" name="date" placeholder="mm/dd/yyyy">
+        </div>
+    </div>
+    <div class="check">
+        <input type="checkbox" id="receive" name="receive">
+        <label>I want to receive news and special offers</label>
+        <br>
+        <input type="checkbox" id="agree" name="agree">
+        <label>I agree with Terms and Conditions</label>
+    </div>
+    <hr>
+    <div class="submit">
+        <button type="submit" id="submit">SUBMIT</button>
+    </div>
+</form>
+</body>
+</html>
