@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-<form action="registration" method="post">
+<form method="get" action="/registration">
 
     <label for="login">Login: </label>
     <input id="login" name="login" required placeholder="Your login"/>
@@ -21,9 +21,9 @@
     <label>Password:</label>
     <input type="password" required name="password" placeholder="Your password"/>
     <br/>
-    <label>Sex</label>
-    <input type = "radio" name="sex" onclick = //\"getAnswer('male') value="male" checked/> <label>Male</label>
-    <input type="radio" name="sex" onclick = //\"getAnswer('female') value="female"> <label>Female</label>
+    <label>Gender</label>
+    <input type = "radio" name="gender" value="male" checked/> <label>Male</label>
+    <input type="radio" name="gender" value="female"> <label>Female</label>
     <br/>
     <label>Phone:</label>
     <input name="phone" required placeholder="Your phone"/>
