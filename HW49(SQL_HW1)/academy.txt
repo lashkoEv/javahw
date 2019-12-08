@@ -1,0 +1,30 @@
+create database if not exists academy;
+
+use academy;
+
+create table if not exists a_groups
+ ( id int not null auto_increment primary key,
+ name varchar(10) not null unique check (length(name) > 0),
+ rating int not null check (rating > -1 and rating < 6),
+ a_year int not null check (rating > 0 and rating < 6)
+ );
+
+create table if not exists departments (
+id int not null auto_increment primary key,
+financing decimal(5,2) not null default 0 check (financing > -1) ,
+name varchar(100) not null unique check (length(name) > 0)
+);
+
+create table if not exists faculties (
+id int not null auto_increment primary key,
+name varchar(100) not null unique check (length(name) > 0)
+);
+
+create table teachers (
+id int not null auto_increment primary key,
+EmploymentDate date not null check (EmploymentDate >= '01.01.1990'),
+name varchar(8000) not null check (length(name) > 0),
+premium decimal(5,2) not null default 0 check (premium >= 0),
+salary decimal(5,2) not null check (premium > 0),
+surname varchar(8000) not null check (length(surname) > 0)
+);
