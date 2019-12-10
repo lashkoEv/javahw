@@ -1,0 +1,101 @@
+create database if not exists movies default charset utf8;
+
+use movies;
+
+CREATE TABLE if not exists directors (
+	director_id int NOT NULL AUTO_INCREMENT,
+	first_name varchar(50) NOT NULL CHECK (length(first_name) > 0),
+	last_name varchar(50) NOT NULL CHECK (length(last_name) > 0),
+	nationality varchar(50) NOT NULL CHECK (length(nationality) > 0),
+	birth date NOT NULL CHECK (birth > '01.01.1900'),
+	PRIMARY KEY (director_id)
+); 
+  
+CREATE TABLE if not exists genres (
+	genre_id int NOT NULL AUTO_INCREMENT,
+	genre_name varchar(50) unique NOT NULL CHECK (length(genre_name) > 0),
+	PRIMARY KEY (genre_id)
+);
+
+CREATE TABLE if not exists movies (
+	movie_id int NOT NULL AUTO_INCREMENT,
+	director_id int,
+	title varchar(100) NOT NULL CHECK (length(title) > 0),
+	release_year int NOT NULL CHECK (release_year >= 1895),
+	rating decimal(3,1) CHECK (rating >= 0 <= 10),
+	plot varchar(8000),
+	movie_length time,
+	PRIMARY KEY (movie_id)
+);
+
+alter table movies add constraint fk_movies_directors 
+	foreign key (director_id) references directors(director_id)
+    	on delete set null 
+    	on update cascade;
+    
+create table if not exists movies_genres (
+	movie_id int,
+	genre_id int,
+	primary key(movie_id, genre_id),
+	KEY fk_movies_genres_genres (genre_id),
+	CONSTRAINT fk_movies_genres_genres FOREIGN KEY (genre_id) REFERENCES genres(genre_id) 
+	ON DELETE cascade ON UPDATE CASCADE,
+	KEY fk_movies_genres_movies(movie_id),
+	CONSTRAINT fk_movies_genres_movies FOREIGN KEY (movie_id) REFERENCES movies(movie_id) 
+	ON DELETE cascade ON UPDATE CASCADE
+);
+
+create table if not exists actors (
+	actor_id int NOT NULL AUTO_INCREMENT,
+	first_name varchar(50) NOT NULL CHECK (length(first_name) > 0),
+	last_name varchar(50) NOT NULL CHECK (length(last_name) > 0),
+	nationality varchar(50) NOT NULL CHECK (length(nationality) > 0),
+	birth date NOT NULL CHECK (birth > '01.01.1900'),
+	PRIMARY KEY (actor_id)
+);  
+
+create table if not exists movies_actors (
+	movie_id int,
+	actor_id int,
+	primary key(movie_id, actor_id),
+	KEY fk_movies_actors_actors (actor_id),
+	CONSTRAINT fk_movies_actors_actors FOREIGN KEY (actor_id) REFERENCES actors(actor_id) 
+	ON DELETE cascade ON UPDATE CASCADE,
+	KEY fk_movies_actors_movies(movie_id),
+	CONSTRAINT fk_movies_actors_movies FOREIGN KEY (movie_id) REFERENCES movies(movie_id) 
+	ON DELETE cascade ON UPDATE CASCADE
+);   
+
+insert into directors (first_name, last_name, nationality, birth) values
+	('Пётр', 'Петров', 'украинец', '1972.12.05'),
+    	('Стивен', 'Спилберг', 'американец', '1946.12.18'),
+    	('Уолт', 'Дисней', 'американец', '1901.12.05');
+    
+insert into genres (genre_name) values
+	('детектив'),
+    	('комедия'),
+    	('триллер');
+    
+insert into actors (first_name, last_name, nationality, birth) values
+	('Пётр', 'Петров', 'украинец', '1972.06.30'),
+    	('Брэд', 'Питт', 'американец', '1963.12.18'),
+    	('Анжелина', 'Джоли', 'американка', '1945.06.04'),
+    	('Адриано', 'Челентано', 'итальянец', '1938.01.06'),
+    	('Софи', 'Лорен', 'итальянка', '1934.09.20');
+
+insert into movies (director_id, title, release_year, rating, plot, movie_length) values
+	(1, 'Фильм', 2019, 7, 'Cюжет фильма' , '2:20'),
+	(2, 'Фильм 2', 2000, 10, 'Cюжет фильма' , '2:40'),
+	(3, 'Фильм 3', 1965, 9.7, 'Cюжет фильма' , '1:55');
+    
+insert into movies_genres (movie_id, genre_id) values
+	(1,1),
+    	(2,2),
+	(3,3);
+    
+insert into movies_actors (movie_id, actor_id) values
+	(1,1),
+    	(2,2),
+    	(2,3),
+    	(3,4),
+    	(3,5);
