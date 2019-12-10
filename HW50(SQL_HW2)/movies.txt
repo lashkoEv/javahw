@@ -98,4 +98,4 @@ insert into movies_actors (movie_id, actor_id) values
     (2,2),
     (2,3),
     (3,4),
-    (3,5);
+    (3,5); 
