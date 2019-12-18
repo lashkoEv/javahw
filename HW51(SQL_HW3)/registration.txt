@@ -7,7 +7,7 @@ create table if not exists users (
     login varchar(50) not null check (length(login) > 0),
     password varchar(50) not null check (length(password) > 0),
     gender set('male', 'female') not null default 'male',
-    phone varchar(12) not null check (length(phone) = 12),
+    phone varchar(12) not null,
     email varchar(50) not null check (length(email) > 0),
     subscribe boolean not null default true,
     primary key (id)
