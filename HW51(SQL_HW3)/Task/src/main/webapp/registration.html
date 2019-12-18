@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        input {
+            margin: 5px;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<form method="get" action="/registration">
+
+    <label for="login">Login: </label>
+    <input id="login" name="login" required placeholder="Your login"/>
+    <br/>
+    <label>Password:</label>
+    <input type="password" required name="password" placeholder="Your password"/>
+    <br/>
+    <label>Gender</label>
+    <input type = "radio" name="gender" value="male" checked/> <label>Male</label>
+    <input type="radio" name="gender" value="female"> <label>Female</label>
+    <br/>
+    <label>Phone:</label>
+    <input name="phone" required placeholder="Your phone"/>
+    <br>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your email"/>
+    <br>
+    <label>Subscribe</label>
+    <input type="checkbox" name="subscribe" checked/>
+    <br/>
+    <button id="button" type="submit">Send</button>
+    <button type="reset">Reset</button>
+</form>
+</body>
+</html>

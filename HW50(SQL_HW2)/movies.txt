@@ -30,8 +30,8 @@ create table if not exists movies (
 
 alter table movies add constraint fk_movies_directors 
 	foreign key (director_id) references directors(director_id)
-    on delete set null
-    on update cascade;
+    	on delete set null
+    	on update cascade;
     
 create table if not exists movies_genres (
 	movie_id int,
@@ -67,35 +67,35 @@ create table if not exists movies_actors (
 );   
 
 insert into directors (first_name, last_name, nationality, birth) values
-	('Пётр', 'Петров', 'украинец', '1972.12.05'),
+    ('Пётр', 'Петров', 'украинец', '1972.12.05'),
     ('Стивен', 'Спилберг', 'американец', '1946.12.18'),
     ('Уолт', 'Дисней', 'американец', '1901.12.05');
     
 insert into genres (genre_name) values
-	('детектив'),
+    ('детектив'),
     ('комедия'),
     ('триллер');
     
 insert into actors (first_name, last_name, nationality, birth) values
-	('Пётр', 'Петров', 'украинец', '1972.06.30'),
+    ('Пётр', 'Петров', 'украинец', '1972.06.30'),
     ('Брэд', 'Питт', 'американец', '1963.12.18'),
     ('Анжелина', 'Джоли', 'американка', '1945.06.04'),
     ('Адриано', 'Челентано', 'итальянец', '1938.01.06'),
     ('Софи', 'Лорен', 'итальянка', '1934.09.20');
 
 insert into movies (director_id, title, release_year, rating, plot, movie_length) values
-	(1, 'Фильм 1', 2019, 7, 'Сюжет фильма' , '2:20'),
-	(2, 'Фильм 2', 2000, 10, 'Сюжет фильма' , '2:40'),
-	(3, 'Фильм 3', 1965, 9.7, 'Сюжет фильма' , '1:55');
+    (1, 'Фильм 1', 2019, 7, 'Сюжет фильма' , '2:20'),
+    (2, 'Фильм 2', 2000, 10, 'Сюжет фильма' , '2:40'),
+    (3, 'Фильм 3', 1965, 9.7, 'Сюжет фильма' , '1:55');
     
 insert into movies_genres (movie_id, genre_id) values
-	(1,1),
+    (1,1),
     (2,2),
-	(3,3);
+    (3,3);
     
 insert into movies_actors (movie_id, actor_id) values
-	(1,1),
+    (1,1),
     (2,2),
     (2,3),
     (3,4),
-    (3,5); 
+    (3,5);
