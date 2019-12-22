@@ -2,18 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8d9b529-26bf-4c5d-8de6-d89bc90b3f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/95eb859b-0d9a-4538-96b6-f4f34fbb39ed.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw52/SQLSelect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/hw52/SQLSelect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/SQLSelect_Servlet.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SQLSelect_Servlet/src/main/java/hw52/Task7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +41,7 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -64,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hw52/SQLSelect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="63" column="96" selection-start-line="63" selection-start-column="96" selection-end-line="63" selection-end-column="96" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="16" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -80,6 +82,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lashkoEv &lt;55919127+lashkoev@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -212,15 +219,24 @@
       <option name="presentableId" value="Default" />
       <updated>1576955647152</updated>
       <workItem from="1576955652414" duration="5246000" />
-      <workItem from="1576961170386" duration="326000" />
+      <workItem from="1576961170386" duration="3810000" />
     </task>
+    <task id="LOCAL-00001" summary="HW53(console)">
+      <created>1576961550649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576961550649</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5572000" />
+    <option name="totallyTimeSpent" value="9056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,7 +250,7 @@
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -263,6 +279,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HW53(console)" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW53(console)" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -280,8 +300,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hw52/SQLSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="63" column="96" selection-start-line="63" selection-start-column="96" selection-end-line="63" selection-end-column="96" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="16" selection-end-column="33" />
         </state>
       </provider>
     </entry>

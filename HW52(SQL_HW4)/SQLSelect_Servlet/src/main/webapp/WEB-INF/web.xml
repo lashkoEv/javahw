@@ -1,0 +1,71 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>Task1</servlet-name>
+    <servlet-class>hw52.Task1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task1</servlet-name>
+    <url-pattern>/Task1</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task2</servlet-name>
+    <servlet-class>hw52.Task2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task2</servlet-name>
+    <url-pattern>/Task2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task3</servlet-name>
+    <servlet-class>hw52.Task3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task3</servlet-name>
+    <url-pattern>/Task3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task4</servlet-name>
+    <servlet-class>hw52.Task4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task4</servlet-name>
+    <url-pattern>/Task4</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task5</servlet-name>
+    <servlet-class>hw52.Task5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task5</servlet-name>
+    <url-pattern>/Task5</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task6</servlet-name>
+    <servlet-class>hw52.Task6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task6</servlet-name>
+    <url-pattern>/Task6</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Task7</servlet-name>
+    <servlet-class>hw52.Task7</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Task7</servlet-name>
+    <url-pattern>/Task7</url-pattern>
+  </servlet-mapping>
+
+</web-app>
