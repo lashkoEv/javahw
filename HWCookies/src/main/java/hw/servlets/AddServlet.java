@@ -22,37 +22,35 @@ public class AddServlet extends HttpServlet {
         String domain = req.getParameter("domain");
         String time = req.getParameter("time");
         String http = req.getParameter("httpHttps");
-        System.out.println(key);
+     /*   System.out.println(key);
         System.out.println(value);
         System.out.println(domain);
         System.out.println(Integer.parseInt(time));
         System.out.println(http);
 
+      */
+
         if (!"".equals(key) && !"".equals(value) && !created) {
-            Cookie cookie = new Cookie(key, value);
+            Cookie c = new Cookie(key, value);
 
             if (!"".equals(domain)) {
-                cookie.setDomain(domain);
+                c.setDomain(domain);
             }
             if (!"".equals(time)) {
-                cookie.setMaxAge(Integer.parseInt(time));
+                c.setMaxAge(Integer.parseInt(time));
             }
             if ("HTTPS".equals(http)) {
-                cookie.setSecure(true);
+                c.setSecure(true);
             } else {
-                cookie.setSecure(false);
+                c.setSecure(false);
             }
-            System.out.println(cookie.getValue());
+           /* System.out.println(cookie.getValue());
             System.out.println(cookie.getName());
             System.out.println(cookie.getSecure());
             System.out.println(cookie.getMaxAge());
 
-            resp.addCookie(cookie);
-
-            cookies = req.getCookies();
-            for (Cookie c : cookies) {
-                System.out.println(c.getName());
-            }
+            */
+            resp.addCookie(c);
         }
 
         resp.sendRedirect(getServletContext().getContextPath() + "/");

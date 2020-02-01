@@ -16,11 +16,13 @@ public class EditServlet extends HttpServlet {
         String domain = req.getParameter("domain");
         String time = req.getParameter("time");
         String http = req.getParameter("httpHttps");
-        System.out.println(key);
+      /*  System.out.println(key);
         System.out.println(value);
         System.out.println(domain);
         System.out.println(Integer.parseInt(time));
         System.out.println(http);
+
+       */
 
         if (cookies != null) {
             for (Cookie c : cookies) {
@@ -40,7 +42,7 @@ public class EditServlet extends HttpServlet {
                     }else {
                         c.setDomain(c.getDomain());
                     }
-                    if (req.getParameter("httpHttps").equals("HTTPS")) {
+                    if ("HTTPS".equals(http)) {
                         c.setSecure(true);
                     } else {
                         c.setSecure(false);
