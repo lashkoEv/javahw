@@ -1,14 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <%@include file="include/header.jsp" %>
+    <c:import url="include/header.jsp"/>
 </head>
 
 <body>
 
 <!-- Navigation -->
-<%@include file="include/navigation.jsp" %>
+<c:import url="include/navigation.jsp"/>
 
 
 <!-- Page Content -->
@@ -129,18 +132,20 @@
             </div>
 
         </div>
-
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
+            <!-- Admin panel -->
+            <c:import url="include/adminPannel.jsp"/>
+
             <!-- Search Widget -->
-            <%@include file="include/searchWidget.jsp" %>
+            <c:import url="include/searchWidget.jsp"/>
 
             <!-- Categories Widget -->
-            <%@include file="include/categoriesWidget.jsp" %>
+            <c:import url="include/categoriesWidget.jsp"/>
 
             <!-- Side Widget -->
-            <%@include file="include/sideWidget.jsp" %>
+            <c:import url="include/sideWidget.jsp"/>
 
         </div>
 
@@ -151,7 +156,7 @@
 <!-- /.container -->
 
 <!-- Footer -->
-<%@include file="include/footer.jsp" %>
+<c:import url="include/footer.jsp"/>
 
 <!-- Bootstrap core JavaScript -->
 <script src="../../Static/vendor/jquery/jquery.min.js"></script>
@@ -160,3 +165,4 @@
 </body>
 
 </html>
+
