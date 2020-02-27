@@ -1,4 +1,4 @@
-package org.itstep.Listener;
+package org.itstep.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

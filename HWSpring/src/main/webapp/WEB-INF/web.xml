@@ -64,6 +64,6 @@
   </listener>
 
   <listener>
-    <listener-class>org.itstep.Listener.MyContextServletListener</listener-class>
+    <listener-class>org.itstep.listener.MyContextServletListener</listener-class>
   </listener>
 </web-app>
