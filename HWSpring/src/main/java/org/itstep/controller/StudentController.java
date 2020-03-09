@@ -37,14 +37,17 @@ public class StudentController {
         int id = 0;
         try {
             id = repository.save(student);
+            if(id == -1) {
+                throw new Exception("No group!");
+            }
             message = "successfully saved";
         } catch(Exception ex) {
             System.out.println(ex.getLocalizedMessage());
-            message = "some error";
+            message = "Error: " + ex.getLocalizedMessage();
         }
-        redirectAttributes.addFlashAttribute("error", message);
-        System.out.println(student);
-        return "redirect:/students/info/" + id;
+        redirectAttributes.addFlashAttribute("message", message);
+        //System.out.println(student);
+        return "redirect:/students";
     }
 
     @GetMapping("/info/{id}")
@@ -72,9 +75,9 @@ public class StudentController {
 
     @PostMapping("/update/{id}")
     public String update(@PathVariable int id, RedirectAttributes redirectAttributes, HttpServletRequest req) {
+        String message = "";
         try {
             String fName = req.getParameter("firstName");
-
             String lName = req.getParameter("lastName");
             String group = req.getParameter("group");
             String age = req.getParameter("age");
@@ -91,12 +94,15 @@ public class StudentController {
             if(!"".equals(age)){
                 student.setAge(Integer.parseInt(age));
             }
-            //System.out.println(student);
-            repository.update(student);
-            redirectAttributes.addFlashAttribute("message", "Update successfully");
-        }catch (Throwable ex) {
-            redirectAttributes.addFlashAttribute("message", "Error: " + ex.getLocalizedMessage());
+
+            if(repository.update(student) == -1) {
+                throw new Exception("No group!");
+            }
+            message = "Update successfully";
+        }catch (Exception ex) {
+           message = "Error: " + ex.getLocalizedMessage();
         }
+        redirectAttributes.addFlashAttribute("message", message);
         return "redirect:/students";
     }
 }

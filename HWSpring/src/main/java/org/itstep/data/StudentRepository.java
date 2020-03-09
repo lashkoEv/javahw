@@ -1,5 +1,6 @@
 package org.itstep.data;
 
+import org.itstep.model.Group;
 import org.itstep.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -32,23 +33,31 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
     @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class, noRollbackFor = FileNotFoundException.class)
     @Override
     public Integer save(Student data) {
+        int groupId = isValidGroup(data);
+        if (groupId == -1) {
+            return -1;
+        }
         GeneratedKeyHolder holder = new GeneratedKeyHolder();
-            jdbcTemplate.update(con -> {
-                PreparedStatement ps =
-                        con.prepareStatement("insert into students(first_name, last_name, age, \"group\") values(?, ?, ?, ?)",
-                                Statement.RETURN_GENERATED_KEYS);
-                ps.setString(1, data.getFirstName());
-                ps.setString(2, data.getLastName());
-                ps.setInt(3, data.getAge());
-                ps.setString(4, data.getGroup());
-                return ps;
-            }, holder);
+        jdbcTemplate.update(con -> {
+            PreparedStatement ps =
+                    con.prepareStatement("insert into students(first_name, last_name, age, \"group\") values(?, ?, ?, ?)",
+                            Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, data.getFirstName());
+            ps.setString(2, data.getLastName());
+            ps.setInt(3, data.getAge());
+            ps.setInt(4, groupId);
+            return ps;
+        }, holder);
         return Objects.requireNonNull(holder.getKey()).intValue();
     }
 
     @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class, noRollbackFor = FileNotFoundException.class)
     @Override
-    public void update(Student data) {
+    public int update(Student data) {
+        int groupId = isValidGroup(data);
+        if (groupId == -1) {
+            return -1;
+        }
         jdbcTemplate.update(con -> {
             PreparedStatement ps =
                     con.prepareStatement("update students set first_name=?, last_name=?, age=?, \"group\"=? where id=?",
@@ -60,6 +69,20 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
             ps.setInt(5, data.getId());
             return ps;
         });
+        return 0;
+    }
+
+    private int isValidGroup(Student data) {
+        List<Group> query = jdbcTemplate.query("select id, group_name from groups",
+                (rs, rowNum) -> new Group(rs.getInt("id"),
+                        rs.getString("group_name")));
+        int groupId = -1;
+        for (int i = 0;i < query.size();i++){
+            if(query.get(i).getGroupName().equals(data.getGroup())){
+                groupId = query.get(i).getId();
+            }
+        }
+        return groupId;
     }
 
     @Transactional
@@ -70,12 +93,12 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
 
     @Override
     public List<Student> findAll() {
-        return jdbcTemplate.query("select id, first_name, last_name, age, \"group\" from students",
+        return jdbcTemplate.query("select students.id, first_name, last_name, age, group_name from students, groups where \"group\" = groups.id",
                 (rs, rowNum) -> new Student(rs.getInt("id"),
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getInt("age"),
-                        rs.getString("group")));
+                        rs.getString("group_name")));
     }
 
     @Transactional(readOnly = true)
