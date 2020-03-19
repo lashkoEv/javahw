@@ -55,23 +55,15 @@
             <form:errors path="password" cssClass="error-message"/>
         </div>
         <div>
-            <form:label path="replayPassword">Повторите пароль: </form:label>
-            <form:input type="password" path="replayPassword" cssErrorClass="error"/>
-            <form:errors path="replayPassword" cssClass="error-message"/>
-        </div>
-
-        <div>
             <form:label path="email">Email: </form:label>
             <form:input path="email" cssErrorClass="error"/>
             <form:errors path="email" cssClass="error-message"/>
         </div>
-
         <div>
             <form:label path="phone">Телефон: </form:label>
             <form:input path="phone" placeholder="[+38] 0*********" cssErrorClass="error"/>
             <form:errors path="phone" cssClass="error-message"/>
         </div>
-
         <div>
             <form:label path="gender">Пол: </form:label>
             <form:select path="gender" cssErrorClass="error">
