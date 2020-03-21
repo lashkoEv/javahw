@@ -1,0 +1,68 @@
+div {
+    width: 600px;
+    height: 150px;
+    padding: 50px;
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#input {
+    padding: 10px 0 10px 7px;
+    border: 2px solid black;
+    width: 590px;
+    margin-top: 20px;
+}
+
+hr {
+    margin-top: 20px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+span {
+    margin-left: 5%;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: grey;
+}
+
+input[type=checkbox] {
+    position: relative;
+    padding: 10px 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    margin-right: 50px;
+    float: right;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+li {
+    padding: 10px 0 10px 15px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+}
