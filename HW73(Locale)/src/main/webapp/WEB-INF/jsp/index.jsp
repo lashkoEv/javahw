@@ -45,30 +45,35 @@
     <spring:url value='/' var="url"/>
     <form:form method="post" modelAttribute="user" action="${url}">
         <div>
-            <form:label path="login">Логин: </form:label>
+            <form:label path="login"><spring:message code="login"/>:</form:label>
             <form:input path="login" cssErrorClass="error"/>
             <form:errors path="login" cssClass="error-message"/>
         </div>
         <div>
-            <form:label path="password">Пароль: </form:label>
+            <form:label path="password"><spring:message code="password"/>:</form:label>
             <form:input type="password" path="password" cssErrorClass="error"/>
             <form:errors path="password" cssClass="error-message"/>
         </div>
         <div>
-            <form:label path="email">Email: </form:label>
+            <form:label path="replayPassword"><spring:message code="replayPassword"/>:</form:label>
+            <form:input type="password" path="replayPassword" cssErrorClass="error"/>
+            <form:errors path="replayPassword" cssClass="error-message"/>
+        </div>
+        <div>
+            <form:label path="email"><spring:message code="email"/>:</form:label>
             <form:input path="email" cssErrorClass="error"/>
             <form:errors path="email" cssClass="error-message"/>
         </div>
         <div>
-            <form:label path="phone">Телефон: </form:label>
+            <form:label path="phone"><spring:message code="phone"/>:</form:label>
             <form:input path="phone" placeholder="[+38] 0*********" cssErrorClass="error"/>
             <form:errors path="phone" cssClass="error-message"/>
         </div>
         <div>
-            <form:label path="gender">Пол: </form:label>
+            <form:label path="gender"><spring:message code="gender"/>:</form:label>
             <form:select path="gender" cssErrorClass="error">
-                <form:option value="male">Мужской</form:option>
-                <form:option value="female">Женский</form:option>
+                <form:option value="male"><spring:message code="male"/></form:option>
+                <form:option value="female"><spring:message code="female"/></form:option>
             </form:select>
             <form:errors path="gender" cssClass="error-message"/>
         </div>
