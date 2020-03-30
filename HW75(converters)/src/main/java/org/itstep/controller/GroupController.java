@@ -65,5 +65,4 @@ public class GroupController {
         log.debug("Delete group id: " + id);
         return "redirect:/groups";
     }
-
 }
