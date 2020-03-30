@@ -16,6 +16,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class Group {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
