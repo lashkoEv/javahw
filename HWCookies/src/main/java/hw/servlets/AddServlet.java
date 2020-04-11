@@ -22,13 +22,6 @@ public class AddServlet extends HttpServlet {
         String domain = req.getParameter("domain");
         String time = req.getParameter("time");
         String http = req.getParameter("httpHttps");
-     /*   System.out.println(key);
-        System.out.println(value);
-        System.out.println(domain);
-        System.out.println(Integer.parseInt(time));
-        System.out.println(http);
-
-      */
 
         if (!"".equals(key) && !"".equals(value) && !created) {
             Cookie c = new Cookie(key, value);
@@ -44,12 +37,7 @@ public class AddServlet extends HttpServlet {
             } else {
                 c.setSecure(false);
             }
-           /* System.out.println(cookie.getValue());
-            System.out.println(cookie.getName());
-            System.out.println(cookie.getSecure());
-            System.out.println(cookie.getMaxAge());
 
-            */
             resp.addCookie(c);
         }
 

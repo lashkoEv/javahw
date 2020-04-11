@@ -1,6 +1,7 @@
 package org.itstep.service;
 
-import java.util.*;
+import
+        java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
