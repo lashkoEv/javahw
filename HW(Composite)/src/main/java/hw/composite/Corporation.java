@@ -2,8 +2,8 @@ package hw.composite;
 
 import java.util.ArrayList;
 
-public class Corporation extends Unit{
-    public Corporation (String name) {
+public class Corporation extends Unit {
+    public Corporation(String name) {
         super(name);
         units = new ArrayList<>();
     }

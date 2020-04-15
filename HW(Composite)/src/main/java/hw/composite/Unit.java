@@ -24,6 +24,7 @@ public abstract class Unit implements Iterable<Unit>, Iterator<Unit> {
             units.add(unit);
         }
     }
+
     public void remove(Unit unit) {
         units.remove(unit);
     }
