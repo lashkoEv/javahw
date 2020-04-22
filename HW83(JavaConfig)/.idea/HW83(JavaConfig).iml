@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="WebConfig" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/org/itstep/config/WebConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/itstep/config/JpaConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/itstep/config/CustomWebInitializer.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/itstep/config/WebSecurity.java</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>
