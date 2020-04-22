@@ -118,7 +118,7 @@ public class StudentsController {
         if (bindingResult.hasErrors()) {
             model.addAttribute("groups", groupService.findAll(Pageable.unpaged()).getContent());
             log.error(bindingResult.toString());
-            return "student/formRegister";
+            return "student/register";
         }
         studentDto.setPassword("{noop}" + studentDto.getPassword());
         studentService.save(studentDto);
@@ -129,4 +129,5 @@ public class StudentsController {
         log.debug("Create student: " + studentDto.toString());
         return REDIRECT_INDEX;
     }
+    
 }

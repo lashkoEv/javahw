@@ -32,8 +32,8 @@
         </processorPath>
         <module name="HW80(Security)" />
         <module name="HW82(Register)" />
-        <module name="HW81(UserDetails)" />
         <module name="jpa-demo" />
+        <module name="HW81(UserDetails)" />
       </profile>
     </annotationProcessing>
   </component>
